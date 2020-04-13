@@ -2,16 +2,24 @@
 
 import sys
 
-
 t = int(input().strip())
+
+# Equation definition
+def eq(x):
+    return x * (x + 1)
+
 for a0 in range(t):
     n = int(input().strip())
     
-    i = 0
+    n -= 1
+    
+    # Initialise variables
+    mult3 = int(n/3)
+    mult5 = int(n/5)
+    mult15 = int (n/15)
     multSum = 0
 
-    while i < n:
-        if i%3 == 0 or i%5 == 0:
-            multSum += i
-        i += 1
+    # Calculate final sum
+    multSum =int(int(3 * eq(mult3) + 5 * eq(mult5) - 15 * eq(mult15)) // 2)
+
     print (multSum)
