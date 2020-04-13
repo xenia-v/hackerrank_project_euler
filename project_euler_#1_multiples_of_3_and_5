@@ -16,7 +16,7 @@ for a0 in range(t):
     # Initialise variables
     mult3 = int(n/3)
     mult5 = int(n/5)
-    mult15 = int (n/15)
+    mult15 = int(n/15)
     multSum = 0
 
     # Calculate final sum
