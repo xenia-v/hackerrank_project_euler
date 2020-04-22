@@ -1,0 +1,30 @@
+#!/bin/python3
+
+import sys
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+
+    # Return 0 if below minimum limit 2, else calculate
+    if (n < 2):
+        print(0)
+    else:
+        # Fibonacci values
+        fib1 = 0
+        fib2 = 2
+        result = 2
+
+        # Calculation using recursive formula for even Fibonacci Numbers
+        while fib2 < n:
+            x = 4 * fib2 + fib1
+
+            # Update result
+            if x <= n:
+                result += x
+            
+            # Update values
+            fib1 = fib2
+            fib2 = x
+
+        print(result)
